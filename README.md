@@ -20,5 +20,5 @@ For this project, we recommend using Conda, a powerful package and environment m
 
 ## Installation Guide
 
-### Step 1: Install Conda
+### Install Conda
 If you don't have Conda installed, visit the [official Conda installation guide](https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html) and follow the instructions for your operating system.
