@@ -90,11 +90,36 @@ Once the optimization process is complete, export the best-performing model for 
 tpot.export('best_model.py')
 ```
 
-6. **Evaluate the Best Model**:
+6. **Model Evaluation**:
 
-Evaluate the exported best model on your test dataset or perform additional tasks as needed.
+   - Evaluate the model's accuracy on the test set and print the final accuracy.
 
-That's it! You've successfully used Tpot to automate the process of optimizing a machine learning model. Customize the configuration settings and data loading steps according to your specific use case.
+```python
+    accuracy = tpot.score(X_test, y_test)
+print(f'Final Accuracy: {accuracy:.4f}')
+```
+
+7. **Confusion Matrix Visualization**:
+
+   - Generate a confusion matrix to visualize the model's performance.
+
+```python
+y_pred = tpot.predict(X_test)
+
+cm = confusion_matrix(y_test, y_pred)
+plt.figure(figsize=(8, 6))
+sns.heatmap(cm, annot=True, fmt='d', cmap='Blues', xticklabels=['No Diabetes', 'Diabetes'], yticklabels=['No Diabetes', 'Diabetes'])
+plt.xlabel('Predicted')
+plt.ylabel('Actual')
+plt.title('Confusion Matrix')
+plt.show()
+```
+
+7. **Visualization**:
+
+   - Visualize the confusion matrix with labeled axes and a title for better understanding.
+
+That's a high-level overview of the code and its purpose. You can adapt this code to your specific binary classification task by replacing the dataset and target variable accordingly.
 
 ## Additional Resources
 

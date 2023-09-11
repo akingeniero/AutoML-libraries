@@ -19,7 +19,6 @@ clf.fit(X_train, y_train, verbose=2)
 accuracy = clf.evaluate(X_test, y_test)[1]
 print(f'Final Accuracy: {accuracy:.4f}')
 
-
 y_pred = clf.predict(X_test)
 
 cm = confusion_matrix(y_test, y_pred)
